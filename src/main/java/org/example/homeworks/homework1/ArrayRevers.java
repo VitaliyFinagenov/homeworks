@@ -1,4 +1,4 @@
-package org.example.homeworks;
+package org.example.homeworks.homework1;
 
 import java.util.Arrays;
 

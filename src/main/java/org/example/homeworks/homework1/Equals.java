@@ -1,4 +1,4 @@
-package org.example.homeworks;
+package org.example.homeworks.homework1;
 
 public class Equals {
     public static void main(String[] args) {
