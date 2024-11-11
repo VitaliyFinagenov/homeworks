@@ -9,7 +9,7 @@ public class SumHonest {
             if (number[i] > 0){
                 countHonest++;
             } else {
-                differenceOdd -= number[i];
+                differenceOdd += number[i];
             }
         }
         System.out.println(countHonest);
