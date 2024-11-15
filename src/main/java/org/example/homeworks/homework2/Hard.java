@@ -1,12 +1,23 @@
 package org.example.homeworks.homework2;
 
+import java.util.Scanner;
+
 public class Hard {
     public static void main(String[] args) {
         deposit();
     }
 
     public static void deposit() {
-        //todo: пиши свой код тут
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите сумму вклада: ");
+        float money = sc.nextFloat();
+        System.out.print("Введите срок вклада в месяцах: ");
+        int month = sc.nextInt();
+        float resultMoney = money;
+        for (int i = 0; i < month; i++) {
+            resultMoney = (float) (resultMoney + (resultMoney * 0.07));
+        }
+        System.out.printf("После %d месяцев сумма вклада составит %f", month, resultMoney);
     }
 }
 

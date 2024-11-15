@@ -1,5 +1,7 @@
 package org.example.homeworks.homework2;
 
+import java.util.Scanner;
+
 public class Easy {
     public static void main(String[] args) {
         System.out.println("------------- Задача 1 -------------");
@@ -9,24 +11,52 @@ public class Easy {
         sumNumbers();
         System.out.println("------------------------------------");
         System.out.println("\n------------- Задача 3 -------------");
-
+        subsequence();
         System.out.println("------------------------------------");
 
 
     }
 
     public static void multiplyTable() {
-        //todo: вывести на экран таблицу умножения
+//        int b = 0;
+//        int result = 0;
+//        for (int i = 1, j = 1; j < 10; i++) {
+//            b = i;
+//            result = j * b;
+//            if (i > 9) {
+//                j++;
+//                i = 1;
+//                continue;
+//            }
+//            System.out.println(j + " * " + b + " = " + result);
+//        }
+
+        for (int i = 1; i < 10; i++){
+            for (int j = 1; j < 10; j++) {
+                System.out.println(i + " * " + j + " = " + (i*j));
+            }
+        }
     }
 
     public static void sumNumbers() {
-        //todo: реализовать суммирование от 1 до number(включительно) нужно использовать сканнер
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0;
+        for (int i = 1; i <= n; i++) {
+            a += i;
+        }
+        System.out.println(a);
     }
 
     public static void subsequence() {
-        //todo: реализация последовательности
+        int a = 1;
+        while (a != 256) {
+            a = a * 2;
+            System.out.print(a + " ");
+        }
     }
 }
+
 
 /*
 задача 1: (цикл for)
