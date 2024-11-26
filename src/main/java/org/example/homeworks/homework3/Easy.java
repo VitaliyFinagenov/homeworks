@@ -1,5 +1,8 @@
 package org.example.homeworks.homework3;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Easy {
     public static void main(String[] args) {
         System.out.println("--------------- task 1 ----------------");
@@ -7,7 +10,7 @@ public class Easy {
         System.out.println(max);
         System.out.println("---------------------------------------");
         System.out.println("--------------- task 2 ----------------");
-        int avg = avg();
+        String avg = avg();
         System.out.println(avg);
         System.out.println("---------------------------------------");
         System.out.println("--------------- task 3 ----------------");
@@ -18,15 +21,50 @@ public class Easy {
     }
 
     public static int maxInArray() {
-        return 1;
+        int bigVariable = Integer.MIN_VALUE;
+        int[] numbers = new int[12];
+        for (int j = 0; j < numbers.length; j++) {
+            numbers[j] = (int) (Math.random() * 31) - 15;
+        }
+        System.out.println(Arrays.toString(numbers));
+        for (int i = 1; i < numbers.length; i++) {
+            if (bigVariable < numbers[i]) {
+                bigVariable = numbers[i];
+            }
+        }
+        return bigVariable;
     }
 
-    public static int avg() {
-        return 1;
+
+    public static String avg() {
+        int[] array1 = new int[5];
+        int[] array2 = new int[5];
+        double average1 = 0;
+        double average2 = 0;
+        for (int j = 0; j < array1.length; j++) {
+            array1[j] = (int) (Math.random() * 6);
+            average1 += (double) array1[j] / 5;
+        }
+        for (int j = 0; j < array2.length; j++) {
+            array2[j] = (int) (Math.random() * 6);
+            average2 += (double) array2[j] / 5;
+        }
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+        if (average1 > average2) {
+            return "average array1 grater";
+        } else if (average1 < average2) {
+            return "average array2 grater";
+        } else {
+            return "equal";
+        }
     }
 
     public static int countWords() {
-        return 1;
+        try(Scanner sc = new Scanner(System.in)) {
+            String words = sc.nextLine();
+            return words.split(" ").length;
+        }
     }
 }
 
